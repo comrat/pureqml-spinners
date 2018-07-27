@@ -21,6 +21,6 @@ Item {
 	Item { onCompleted: { this.element.dom.className="sk-circle12 sk-circle" } }
 
 	constructor: {
-		this.element.dom.className="sk-fading-circle"
+		this.element.dom.className = "sk-fading-circle"
 	}
 }
