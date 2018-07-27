@@ -9,8 +9,4 @@ Item {
 
 	Item { onCompleted: { this.element.dom.className = "double-bounce1" } }
 	Item { onCompleted: { this.element.dom.className = "double-bounce2" } }
-
-	constructor: {
-		this.element.dom.className = "spinner"
-	}
 }
