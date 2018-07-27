@@ -1,0 +1,3 @@
+[submodule "qmlcore"]
+	path = qmlcore
+	url = git@github.com:pureqml/qmlcore.git
