@@ -1,0 +1,7 @@
+{
+	"name": "spinner",
+	"platforms": ["web"],
+	"minify": true,
+	"sources": ["src", "spinkit"],
+	"web-prefix": true
+}
