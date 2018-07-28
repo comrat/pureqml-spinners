@@ -2,5 +2,5 @@
 	"name": "spinner",
 	"platforms": ["web"],
 	"minify": true,
-	"sources": ["src", "spinkit"]
+	"sources": ["src", "spinkit", "loadingio"]
 }

@@ -36,5 +36,12 @@ Rectangle {
 				color: "#fff";
 			}
 		}
+
+		SpinnerWindow {
+			SunSpinner {
+				anchors.centerIn: parent;
+				color: "#fff";
+			}
+		}
 	}
 }
