@@ -1,12 +1,27 @@
 Rectangle {
 	anchors.fill: context;
-	color: "#78909C";
+	color: "#81C784";
+
+	Image {
+		width: 100%;
+		height: 100%;
+		source: "res/shadow2.png";
+	}
+
+	Image {
+		y: 2%;
+		height: 90;
+		anchors.horizontalCenter: parent.horizontalCenter;
+		fillMode: Image.PreserveAspectFit;
+		source: "res/logo.png";
+	}
 
 	Grid {
 		width: 80%;
 		height: 80%;
 		verticalSpacing: 30;
 		horizontalSpacing: 30;
+		horizontalAlignment: Grid.AlignHCenter;
 		anchors.centerIn: parent;
 
 		SpinnerWindow {
