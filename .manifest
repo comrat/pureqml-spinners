@@ -2,5 +2,6 @@
 	"name": "spinner",
 	"platforms": ["web"],
 	"minify": true,
+	"templater": "jinja2",
 	"sources": ["src", "spinkit", "loadingio"]
 }
