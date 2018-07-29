@@ -43,5 +43,12 @@ Rectangle {
 				color: "#fff";
 			}
 		}
+
+		SpinnerWindow {
+			RingSpinner {
+				anchors.centerIn: parent;
+				color: "#fff";
+			}
+		}
 	}
 }
