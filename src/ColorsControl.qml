@@ -1,7 +1,6 @@
 Row {
 	property Color backgroundColor: bgColorInput.color;
 	property Color spinnerColor: spinnerColorInput.color;
-	anchors.horizontalCenter: parent.horizontalCenter;
 	spacing: 30;
 
 	Column {

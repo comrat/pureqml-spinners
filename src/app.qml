@@ -85,10 +85,25 @@ Rectangle {
 		}
 	}
 
-	ColorsControl {
-		id: colorsControl;
+	Text {
+		width: 80%;
+		anchors.horizontalCenter: parent.horizontalCenter;
 		anchors.bottom: parent.bottom;
 		anchors.bottomMargin: 20;
+		horizontalAlignment: Text.AlignHCenter;
+		color: "#fff";
+		font.pixelSize: 16;
+		text: "HOW TO USE<br>" +
+			"Clone this repo to your project:<br>" +
+			"git clone https://github.com/comrat/pureqml-spinners.git<br>" +
+			"Click spinner you want to get its code";
+	}
+
+	ColorsControl {
+		id: colorsControl;
+		anchors.right: parent.right;
+		anchors.bottom: parent.bottom;
+		anchors.margins: 20;
 	}
 
 	CodeDialog { id: codeDialog; }
