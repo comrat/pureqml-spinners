@@ -61,6 +61,18 @@ Rectangle {
 		}
 
 		SpinnerWindow {
+			componentName: "TwoDotsSpinner";
+			componentColor: colorsControl.spinnerColor;
+
+			TwoDotsSpinner {
+				anchors.centerIn: parent;
+				color: colorsControl.spinnerColor;
+			}
+
+			onClicked: { codeDialog.show(this.code) }
+		}
+
+		SpinnerWindow {
 			componentName: "SquareSpinner";
 			componentColor: colorsControl.spinnerColor;
 
