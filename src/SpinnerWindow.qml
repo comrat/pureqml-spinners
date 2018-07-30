@@ -4,7 +4,7 @@ WebItem {
 	property string code: componentName + " " + commonCode;
 	property string commonCode: "{\n" +
 		"\tanchors.centerIn: parent;\n" +
-		"\tcolor: \"#" + componentColor +"\";\n" +
+		"\tcolor: \"" + componentColor +"\";\n" +
 		"}";
 	width: 200;
 	height: 200;

@@ -1,6 +1,6 @@
 Rectangle {
 	anchors.fill: context;
-	color: "#81C784";
+	color: colorsControl.backgroundColor;
 
 	Image {
 		width: 100%;
@@ -26,10 +26,11 @@ Rectangle {
 
 		SpinnerWindow {
 			componentName: "DoubleBounceSpinner";
+			componentColor: colorsControl.spinnerColor;
 
 			DoubleBounceSpinner {
 				anchors.centerIn: parent;
-				color: "#fff";
+				color: colorsControl.spinnerColor;
 			}
 
 			onClicked: { codeDialog.show(this.code) }
@@ -37,43 +38,11 @@ Rectangle {
 
 		SpinnerWindow {
 			componentName: "BounceDotsSpinner";
+			componentColor: colorsControl.spinnerColor;
 
 			BounceDotsSpinner {
 				anchors.centerIn: parent;
-				color: "#fff";
-			}
-
-			onClicked: { codeDialog.show(this.code) }
-		}
-
-		SpinnerWindow {
-			componentName: "FadingCircleSpinner";
-
-			FadingCircleSpinner {
-				anchors.centerIn: parent;
-				color: "#fff";
-			}
-
-			onClicked: { codeDialog.show(this.code) }
-		}
-
-		SpinnerWindow {
-			componentName: "SquareSpinner";
-
-			SquareSpinner {
-				anchors.centerIn: parent;
-				color: "#fff";
-			}
-
-			onClicked: { codeDialog.show(this.code) }
-		}
-
-		SpinnerWindow {
-			componentName: "SunSpinner";
-
-			SunSpinner {
-				anchors.centerIn: parent;
-				color: "#fff";
+				color: colorsControl.spinnerColor;
 			}
 
 			onClicked: { codeDialog.show(this.code) }
@@ -81,14 +50,33 @@ Rectangle {
 
 		SpinnerWindow {
 			componentName: "RingSpinner";
+			componentColor: colorsControl.spinnerColor;
 
 			RingSpinner {
 				anchors.centerIn: parent;
-				color: "#fff";
+				color: colorsControl.spinnerColor;
 			}
 
 			onClicked: { codeDialog.show(this.code) }
 		}
+
+		SpinnerWindow {
+			componentName: "SquareSpinner";
+			componentColor: colorsControl.spinnerColor;
+
+			SquareSpinner {
+				anchors.centerIn: parent;
+				color: colorsControl.spinnerColor;
+			}
+
+			onClicked: { codeDialog.show(this.code) }
+		}
+	}
+
+	ColorsControl {
+		id: colorsControl;
+		anchors.bottom: parent.bottom;
+		anchors.bottomMargin: 20;
 	}
 
 	CodeDialog { id: codeDialog; }
