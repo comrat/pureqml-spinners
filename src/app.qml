@@ -83,6 +83,18 @@ Rectangle {
 
 			onClicked: { codeDialog.show(this.code) }
 		}
+
+		SpinnerWindow {
+			componentName: "SquareSpinner";
+			componentColor: colorsControl.spinnerColor;
+
+			SquareGridSpinner {
+				anchors.centerIn: parent;
+				color: colorsControl.spinnerColor;
+			}
+
+			onClicked: { codeDialog.show(this.code) }
+		}
 	}
 
 	Text {
