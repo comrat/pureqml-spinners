@@ -85,7 +85,7 @@ Rectangle {
 		}
 
 		SpinnerWindow {
-			componentName: "SquareSpinner";
+			componentName: "SquareGridSpinner";
 			componentColor: colorsControl.spinnerColor;
 
 			SquareGridSpinner {
