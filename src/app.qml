@@ -95,6 +95,18 @@ Rectangle {
 
 			onClicked: { codeDialog.show(this.code) }
 		}
+
+		SpinnerWindow {
+			componentName: "FadingSquaresSpinner";
+			componentColor: colorsControl.spinnerColor;
+
+			FadingSquaresSpinner {
+				anchors.centerIn: parent;
+				color: colorsControl.spinnerColor;
+			}
+
+			onClicked: { codeDialog.show(this.code) }
+		}
 	}
 
 	Text {
