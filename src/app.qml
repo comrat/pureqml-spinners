@@ -107,6 +107,18 @@ Rectangle {
 
 			onClicked: { codeDialog.show(this.code) }
 		}
+
+		SpinnerWindow {
+			componentName: "BounceBars";
+			componentColor: colorsControl.spinnerColor;
+
+			BounceBars {
+				anchors.centerIn: parent;
+				color: colorsControl.spinnerColor;
+			}
+
+			onClicked: { codeDialog.show(this.code) }
+		}
 	}
 
 	Text {
