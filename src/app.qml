@@ -109,10 +109,22 @@ Rectangle {
 		}
 
 		SpinnerWindow {
-			componentName: "BounceBars";
+			componentName: "BounceBarsSpinner";
 			componentColor: colorsControl.spinnerColor;
 
-			BounceBars {
+			BounceBarsSpinner {
+				anchors.centerIn: parent;
+				color: colorsControl.spinnerColor;
+			}
+
+			onClicked: { codeDialog.show(this.code) }
+		}
+
+		SpinnerWindow {
+			componentName: "RippleSpinner";
+			componentColor: colorsControl.spinnerColor;
+
+			RippleSpinner {
 				anchors.centerIn: parent;
 				color: colorsControl.spinnerColor;
 			}
