@@ -131,6 +131,18 @@ Rectangle {
 
 			onClicked: { codeDialog.show(this.code) }
 		}
+
+		SpinnerWindow {
+			componentName: "SpinCircleSpinner";
+			componentColor: colorsControl.spinnerColor;
+
+			SpinCircleSpinner {
+				anchors.centerIn: parent;
+				color: colorsControl.spinnerColor;
+			}
+
+			onClicked: { codeDialog.show(this.code) }
+		}
 	}
 
 	Text {
