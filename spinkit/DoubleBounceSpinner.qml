@@ -3,10 +3,37 @@ Item {
 	width: 100;
 	height: 100;
 
-	CssMixin {
-		rules: ".double-bounce1, .double-bounce2 {width: 100%;height: 100%;border-radius: 50%;opacity: 0.6;position: absolute;top: 0;left: 0;-webkit-animation: sk-bounce 2.0s infinite ease-in-out;animation: sk-bounce 2.0s infinite ease-in-out;}.double-bounce2 {-webkit-animation-delay: -1.0s;animation-delay: -1.0s;}@-webkit-keyframes sk-bounce {0%, 100% { -webkit-transform: scale(0.0) }50% { -webkit-transform: scale(1.0) }}@keyframes sk-bounce {0%, 100% { transform: scale(0.0);-webkit-transform: scale(0.0);} 50% { transform: scale(1.0);-webkit-transform: scale(1.0);}}";
+	Rectangle {
+		width: 100%;
+		height: 100%;
+		radius: width / 2;
+		color: parent.color;
+		opacity: 0.6;
+
+		onCompleted: {
+			var html = _globals.html5.html
+			this.style(html.getPrefixedName("animation"), "sk-bounce 2.0s infinite ease-in-out")
+		}
 	}
 
-	Rectangle { color: parent.color; onCompleted: { this.element.dom.className = "double-bounce1" } }
-	Rectangle { color: parent.color; onCompleted: { this.element.dom.className = "double-bounce2" } }
+	Rectangle {
+		width: 100%;
+		height: 100%;
+		radius: width / 2;
+		color: parent.color;
+		opacity: 0.6;
+
+		PositionMixin { value: PositionMixin.Absolute; }
+
+		onCompleted: {
+			var html = _globals.html5.html
+			this.style(html.getPrefixedName("animation"), "sk-bounce 2.0s infinite ease-in-out")
+			this.style(html.getPrefixedName("animation-delay"), "-1.0s")
+		}
+	}
+
+	function registerStyle(style, tag) {
+		var html = _globals.html5.html
+		style.addRule(html.getPrefixedName("@keyframes"), "sk-bounce { 0%, 100% {" + html.getPrefixedName("transform") + ": scale(0.0) } 50% { -webkit-transform: scale(1.0) }}")
+	}
 }
