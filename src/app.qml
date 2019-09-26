@@ -85,18 +85,6 @@ Rectangle {
 		}
 
 		SpinnerWindow {
-			componentName: "SquareGridSpinner";
-			componentColor: colorsControl.spinnerColor;
-
-			SquareGridSpinner {
-				anchors.centerIn: parent;
-				color: colorsControl.spinnerColor;
-			}
-
-			onClicked: { codeDialog.show(this.code) }
-		}
-
-		SpinnerWindow {
 			componentName: "FadingSquaresSpinner";
 			componentColor: colorsControl.spinnerColor;
 
